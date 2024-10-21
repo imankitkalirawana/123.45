@@ -1,4 +1,7 @@
 'use client';
+import { Icon } from '@iconify/react/dist/iconify.js';
+import { Button } from '@nextui-org/react';
+import Link from 'next/link';
 import React from 'react';
 
 export default function Error() {
@@ -8,40 +11,31 @@ export default function Error() {
         <div className="container mx-auto flex min-h-screen items-center justify-center px-6 py-12">
           <div className="w-full">
             <div className="mx-auto flex max-w-lg flex-col items-center text-center">
-              <p className="text-sm font-medium text-blue-500 dark:text-blue-400">
-                404 error
-              </p>
+              <p className="text-sm font-medium text-primary">404 error</p>
               <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
                 We lost this page
               </h1>
               <p className="mt-4 text-gray-500 dark:text-gray-400">
-                We searched high and low, but couldn't find what you're looking
-                for.Let's find a better place for you to go.
+                We searched high and low, but couldn&apos;t find what
+                you&apos;re looking for.Let&apos;s find a better place for you
+                to go.
               </p>
 
               <div className="mt-6 flex w-full shrink-0 items-center gap-x-3 sm:w-auto">
-                <button className="flex w-1/2 items-center justify-center gap-x-2 rounded-lg border px-5 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-200 dark:hover:bg-gray-800 sm:w-auto">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="h-5 w-5 rtl:rotate-180"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
-                    />
-                  </svg>
-
+                <Button
+                  aria-label="Go back"
+                  variant="bordered"
+                  startContent={
+                    <Icon icon="tabler:arrow-narrow-left" fontSize={20} />
+                  }
+                  onClick={() => window.history.back()}
+                >
                   <span>Go back</span>
-                </button>
+                </Button>
 
-                <button className="w-1/2 shrink-0 rounded-lg bg-blue-500 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-500 sm:w-auto">
+                <Button aria-label="Home" color="primary" as={Link} href="/">
                   Take me home
-                </button>
+                </Button>
               </div>
             </div>
 
@@ -74,7 +68,7 @@ export default function Error() {
 
                 <a
                   href="#"
-                  className="mt-4 inline-flex items-center gap-x-2 text-sm text-blue-500 hover:underline dark:text-blue-400"
+                  className="mt-4 inline-flex items-center gap-x-2 text-sm text-primary hover:underline"
                 >
                   <span>Start learning</span>
 
@@ -123,9 +117,9 @@ export default function Error() {
 
                 <a
                   href="#"
-                  className="mt-4 inline-flex items-center gap-x-2 text-sm text-blue-500 hover:underline dark:text-blue-400"
+                  className="mt-4 inline-flex items-center gap-x-2 text-sm text-primary hover:underline"
                 >
-                  <span>View lastest posts</span>
+                  <span>View latest posts</span>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -167,12 +161,12 @@ export default function Error() {
                 </h3>
 
                 <p className="mt-2 text-gray-500 dark:text-gray-400">
-                  Can’t find what you’re looking for?
+                  Can&apos;t find what you&apos;re looking for?
                 </p>
 
                 <a
                   href="#"
-                  className="mt-4 inline-flex items-center gap-x-2 text-sm text-blue-500 hover:underline dark:text-blue-400"
+                  className="mt-4 inline-flex items-center gap-x-2 text-sm text-primary hover:underline"
                 >
                   <span>Chat to our team</span>
 

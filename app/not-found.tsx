@@ -20,12 +20,14 @@ export default function NotFound() {
                 We lost this page
               </h1>
               <p className="mt-4 text-foreground-400">
-                We searched high and low, but couldn't find what you're looking
-                for.Let's find a better place for you to go.
+                We searched high and low, but couldn&apos;t find what
+                you&apos;re looking for.Let&apos;s find a better place for you
+                to go.
               </p>
 
               <div className="mt-6 flex w-full shrink-0 items-center gap-x-3 sm:w-auto">
                 <Button
+                  aria-label="Go back"
                   variant="bordered"
                   as={Link}
                   href="/"
@@ -34,7 +36,13 @@ export default function NotFound() {
                   Go Back
                 </Button>
 
-                <Button variant="flat" color="primary" as={Link} href="/">
+                <Button
+                  aria-label="Home"
+                  variant="flat"
+                  color="primary"
+                  as={Link}
+                  href="/"
+                >
                   Take me home
                 </Button>
               </div>
@@ -85,7 +93,9 @@ export default function NotFound() {
 
                 <h3 className="mt-6 font-medium">Chat to us</h3>
 
-                <p className="mt-2">Can't find what you're looking for?</p>
+                <p className="mt-2">
+                  Can&apos;t find what you&apos;re looking for?
+                </p>
 
                 <NextLink
                   href="#"

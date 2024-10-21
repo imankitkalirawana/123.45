@@ -64,8 +64,8 @@ function FeatureTwo() {
         // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1500px"
       />
       <span className="absolute bottom-5 left-1/2 w-full -translate-x-1/2 text-center text-3xl text-white">
-        Everything's at your fingertips. Quick access to your favorite music and
-        soundscapes
+        Everything&apos;s at your fingertips. Quick access to your favorite
+        music and soundscapes
       </span>
     </BentoCard>
   );
